@@ -7,7 +7,7 @@ Homework 1: Basic Plots
 
 ## Instructions ##
 
-[INSTRUCTIONS: Include instructions on how to run your code.]
+[INSTRUCTIONS: Include instructions on how to run your code. See [`homework0`](../homework0) for an example.]
 
 ## Discussion ##
 
