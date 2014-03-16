@@ -59,6 +59,8 @@ Then, you must add the following widgets to your `shiny` interface:
 
 Below is an example interface:
 
+![IMAGE](shinyapp.png)
+
 Your interface does not need to match this exactly. This is just an example.
 
 Hints
