@@ -1,4 +1,4 @@
-Homework [#]: [HOMEWORK NAME]
+Homework 1: Basic Plots
 ==============================
 
 | **Name**  | [YOUR NAME]  |
