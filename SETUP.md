@@ -8,7 +8,7 @@ Forking Your Repository
 
 To setup your own repository, you want to start by forking (and then cloning) this repository. See the [Fork a Repo](https://help.github.com/articles/fork-a-repo) or [Forking Projects](http://guides.github.com/overviews/forking/) GitHub guides for detailed steps. 
 
-Using Git For Submission
+Using Git For Submission 
 ------------------------------
 
 If you are unfamiliar with `git`, there are many fantastic and free guides available online (just search for `git`). We will also demonstrate a barebones workflow in-class.
