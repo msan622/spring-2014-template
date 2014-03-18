@@ -1,9 +1,9 @@
-Homework 1: Basic Plots
+Homework 1: Basic Charts
 ==============================
 
-For this assignment, you will practice using `R` and `ggplot2` to generate several basic plots, including a scatterplot, bar plot, small multiples plot, and multi-line plot.
+For this assignment, you will practice using `R` and `ggplot2` to generate several basic charts, including a scatterplot, bar chart, small multiples plot, and multi-line plot.
 
-:warning: Your plots may be displayed and discussed in class. Please make sure to **not** include your name on the plots themselves to protect your identity.
+:warning: Your charts may be displayed and discussed in class. Please make sure to **not** include your name on the charts themselves to protect your identity.
 
 Setup
 ------------------------------
@@ -51,17 +51,17 @@ You must create the following plots in a single `R` script:
 
 - **Plot 1: Scatterplot.** Produce a scatterplot from the `movies` dataset in the `ggplot2` package, where `budget` is shown on the x-axis and `rating` is shown on the y-axis. Save the plot as `hw1-scatter.png`.
 
-- **Plot 2: Bar Plot.** Count the number of action, adventure, etc. movies in the `genre` column of the `movies` dataset. Plot the results as a bar plot, and save the plot as `hw1-bar.png`.
+- **Plot 2: Bar Chart.** Count the number of action, adventure, etc. movies in the `genre` column of the `movies` dataset. Show the results as a bar chart, and save the chart as `hw1-bar.png`.
 
 - **Plot 3: Small Multiples.** Use the `genre` column in the `movies` dataset to generate a small-multiples scatterplot using the `facet_wrap()` function such that `budget` is shown on the x-axis and `rating` is shown on the y-axis. Save the plot as `hw1-multiples.png`.
 
-- **Plot 4: Multi-Line Plot.** Produce a multi-line plot from the `eu` dataset (created by transforming the `EuStockMarkets` dataset) with `time` shown on the x-axis and `price` on the y-axis. Draw one line for each index on the same plot. 
+- **Plot 4: Multi-Line Chart.** Produce a multi-line chart from the `eu` dataset (created by transforming the `EuStockMarkets` dataset) with `time` shown on the x-axis and `price` on the y-axis. Draw one line for each index on the same chart. 
 
-  You will need to perform some additional transformations of the dataset before being able to generate this plot. See the multi-line plot code from class for an example.
+  You will need to perform some additional transformations of the dataset before being able to generate this chart. See the multi-line plot code from class for an example.
 
-For each plot, use `ggsave()` to save each plot as a `png` image. Make sure to set a reasonable width and height.
+For each chart, use `ggsave()` to save each chart as a `png` image. Make sure to set a reasonable width and height.
 
-To receive full points, you are required to add an appropriate plot title and axis labels to your plots *and* use color consistently in your plots. Optionally, consider the other aesthetic aspects of your plot. Play around with the settings for the major/minor tick marks, colors, shape, text, and the legend. 
+To receive full points, you are required to add an appropriate chart title and axis labels to your charts *and* use color consistently in your charts. Optionally, consider the other aesthetic aspects of your chart. Play around with the settings for the major/minor tick marks, colors, shape, text, and the legend. 
 
 :warning: You will not receive full points if you only specify the data and use all the default values for the other parameters.
 

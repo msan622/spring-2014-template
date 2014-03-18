@@ -1,4 +1,4 @@
-Homework 1: Basic Plots
+Homework 1: Basic Charts
 ==============================
 
 | **Name**  | [YOUR NAME]  |
