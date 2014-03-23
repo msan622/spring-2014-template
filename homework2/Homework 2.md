@@ -63,6 +63,15 @@ Below is an example interface:
 
 Your interface does not need to match this exactly. This is just an example.
 
+Customization
+------------------------------
+
+If you wish to earn an "A" letter grade, you must go above and beyond the requirements in the [Visualizations](#visualizations) section and produce something uniquely your own. 
+
+For example, you could choose to add extra interactivity, tweak the plot appearance (customizing labels, grid lines, etc.), add the ability to switch to different techniques, show a sortable data table, and so on. This is your chance to try something new, and your chance to impress the instructor. 
+
+Approximately 10% to 15% of the grade for this homework will be reserved for customization features.
+
 Hints
 ------------------------------
 
@@ -80,6 +89,8 @@ Discussion
 ------------------------------
 
 In your discussion, show a screenshot of your visualization followed by a brief description of how to interact with your visualization.
+
+If you choose to customize your visualizations beyond the requirements in the [Visualizations](#visualizations) section, please clearly list and discuss your customization. It is important you explain _what_ you did and _why_ you did it.
 
 Submission
 ------------------------------
