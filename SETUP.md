@@ -13,7 +13,7 @@ Using Git For Submission
 
 If you are unfamiliar with `git`, there are many fantastic and free guides available online (just search for `git`). We will also demonstrate a barebones workflow in-class.
 
-GitHub also has free [Github for Mac](https://help.github.com/categories/31/articles) and [Github for Windows](https://help.github.com/categories/58/articles) applications you can download to manage your `git` repositories. However, just about any `git` client will work as well.
+GitHub also has free [Github for Mac](https://help.github.com/categories/31/articles) and [Github for Windows](https://help.github.com/categories/58/articles) applications you can download to manage your `git` repositories. However, just about any `git` client will work as well. For example, [SourceTree](http://www.sourcetreeapp.com/) is a more powerful `git` client that is free and has versions for both Mac and Windows.
 
 Updating Your Repository
 ------------------------------
