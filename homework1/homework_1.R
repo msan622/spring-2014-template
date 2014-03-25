@@ -59,5 +59,6 @@ print(small_mult_plot)
 
 
 # saving files
-#ggsave(filename = 'hw1-scatter.png', plot = scatter_plot)
-#ggsave(filename = 'hw1-bar.png', plot = bar_plot)
+ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height = 4, width = 6)
+ggsave(filename = 'hw1-bar.png', plot = bar_plot, height = 4, width = 6)
+ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height = 4, width = 6)

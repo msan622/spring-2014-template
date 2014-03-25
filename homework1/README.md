@@ -10,3 +10,11 @@ Homework 1: Basic Charts
 
 ## Discussion ##
 
+![](hw1-scatter.png)
+
+
+![](hw1-bar.png)
+
+
+![](hw1-multiples.png)
+
