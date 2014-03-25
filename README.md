@@ -8,3 +8,5 @@ MSAN 622 Data Visualization
 ## About Me ##
 
 Before joining USF's MSAN program, I studied Math and Economics at Rhodes College. As a former art student, I'm really excited for this class. 
+
+cat
