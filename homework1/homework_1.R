@@ -1,3 +1,5 @@
+setwd("~/Documents/_DataVisualization/msan622/homework1")
+
 library(ggplot2) 
 library(scales)
 
