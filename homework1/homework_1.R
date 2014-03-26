@@ -42,8 +42,7 @@ bar_plot <- ggplot(movies_subset, aes(x = genre, y = ..count..)) +
   xlab('Genre') + ylab('Count') + 
   ggtitle('Count of Movies by Genre') + 
   guides(fill=FALSE) + 
-  scale_fill_manual(values=my_palette) + 
-  theme(axis.text = element_text(size = rel(.5)))
+  scale_fill_manual(values=my_palette) 
 print(bar_plot)
 
 # third plot
