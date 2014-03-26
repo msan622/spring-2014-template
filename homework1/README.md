@@ -17,4 +17,3 @@ Homework 1: Basic Charts
 
 
 ![](hw1-multiples.png)
-
