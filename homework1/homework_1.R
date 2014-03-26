@@ -61,6 +61,6 @@ print(small_mult_plot)
 
 
 # saving files
-ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=4, width=5)
-ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=4, width=5)
-ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=4, width=5)
+ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3.5, width=4)
+ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=5, width=8)
+ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=5.5, width=7)
