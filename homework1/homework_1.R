@@ -42,7 +42,8 @@ bar_plot <- ggplot(movies_subset, aes(x = genre, y = ..count..)) +
   xlab('Genre') + ylab('Count') + 
   ggtitle('Count of Movies by Genre') + 
   guides(fill=FALSE) + 
-  scale_fill_manual(values=my_palette)
+  scale_fill_manual(values=my_palette) + 
+  theme(axis.text = element_text(size = rel(.5)))
 print(bar_plot)
 
 # third plot
@@ -52,13 +53,13 @@ small_mult_plot <- ggplot(movies_subset, aes(x=trans_budget, y=rating, group = f
   ggtitle('IMDb User Rating Vs. Budget by Genre') + 
   facet_wrap(~genre, ncol = 3)  + 
   scale_x_continuous(labels = dollar) + 
-  guides(colour=FALSE) + scale_colour_manual(values=my_palette)
+  guides(colour=FALSE) + scale_colour_manual(values=my_palette) 
 print(small_mult_plot)
 
 # fourth plot
 
 
 # saving files
-ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height = 4, width = 6.5)
-ggsave(filename = 'hw1-bar.png', plot = bar_plot, height = 4, width = 6.5)
-ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height = 4, width = 6.5)
+ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height = 2, width = 3.5)
+ggsave(filename = 'hw1-bar.png', plot = bar_plot, height = 2, width = 3.5)
+ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height = 2, width = 3.5)
