@@ -17,3 +17,6 @@ Homework 1: Basic Charts
 
 
 ![](hw1-multiples.png)
+
+
+![](hw1-multiline.png)

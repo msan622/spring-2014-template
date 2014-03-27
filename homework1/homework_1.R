@@ -2,7 +2,7 @@ setwd("~/Documents/_DataVisualization/msan622/homework1")
 
 library(ggplot2) 
 library(scales)
-
+library(reshape)
 # load dataset
 data(movies) 
 data(EuStockMarkets)
@@ -24,9 +24,6 @@ movies$trans_budget <- movies$budget/1000000
 # remove movies with budget of zero or less
 movies_subset <- subset(movies, movies$budget > 0)
 
-# transform eurodata
-eu <- transform(data.frame(EuStockMarkets), time = time(EuStockMarkets))
-
 # custom palette for genres
 my_palette <- c("sienna2", "steelblue3", "darkolivegreen3", "slateblue3", "#333366", "bisque3","slategray4", 'brown3', "gold3")
 
@@ -35,7 +32,7 @@ scatter_plot <- ggplot(movies_subset, aes(x=trans_budget, y=rating)) +
   geom_point(color = 'slategray4') +  
   xlab('Budget (in millions)') + ylab('IMDb User Rating') + 
   ggtitle('IMDb User Rating Vs. Budget') + 
-  scale_x_continuous(labels=dollar) 
+  scale_x_continuous(labels=dollar) + theme(text = element_text(size=12))
 print(scatter_plot)
 
 # second plot
@@ -58,9 +55,19 @@ small_mult_plot <- ggplot(movies_subset, aes(x=trans_budget, y=rating, group = f
 print(small_mult_plot)
 
 # fourth plot
+# transform eurodata
+eu <- transform(data.frame(EuStockMarkets), time = as.numeric(time(EuStockMarkets)))
+eu_m <- melt(eu, id.vars = 'time', value = c('DAX', 'SMI', 'CAC', 'FTSE'))
+
+new_lineplot <- ggplot(eu_m, aes(x=time, y=value, group = as.factor(variable), color = as.factor(variable))) + 
+  geom_line() + xlab('Time') +
+  ggtitle('European Stock Indexes') +  
+  ylab('Value') + scale_colour_discrete("Index") + theme(text = element_text(size=12))
+print(new_lineplot)
 
 
 # saving files
-ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3.5, width=4)
-ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=5, width=8)
-ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=4, width=5)
+ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3.6, width=5.2)
+ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=5, width=7.5)
+ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=5, width=7.5)
+ggsave(filename = 'hw1-multiline.png', plot = new_lineplot, height=3.6, width=5.2)
