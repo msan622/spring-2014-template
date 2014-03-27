@@ -32,7 +32,7 @@ scatter_plot <- ggplot(movies_subset, aes(x=trans_budget, y=rating)) +
   geom_point(color = 'slategray4') +  
   xlab('Budget (in millions)') + ylab('IMDb User Rating') + 
   ggtitle('IMDb User Rating Vs. Budget') + 
-  scale_x_continuous(labels=dollar) + theme(text = element_text(size=12))
+  scale_x_continuous(labels=dollar) + theme(text = element_text(size=10))
 print(scatter_plot)
 
 # second plot
@@ -59,15 +59,18 @@ print(small_mult_plot)
 eu <- transform(data.frame(EuStockMarkets), time = as.numeric(time(EuStockMarkets)))
 eu_m <- melt(eu, id.vars = 'time', value = c('DAX', 'SMI', 'CAC', 'FTSE'))
 
+# pallete
+eu_palette <- c('#1f78b4', '#e31a1c', '#33a02c', '#fb8072')
+
 new_lineplot <- ggplot(eu_m, aes(x=time, y=value, group = as.factor(variable), color = as.factor(variable))) + 
   geom_line() + xlab('Time') +
   ggtitle('European Stock Indexes') +  
-  ylab('Value') + scale_colour_discrete("Index") + theme(text = element_text(size=12))
+  ylab('Value') + theme(text = element_text(size=10)) + 
+  scale_colour_manual('Index', values= eu_palette)
 print(new_lineplot)
 
-
 # saving files
-ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3.6, width=5.2)
+ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3, width=4)
 ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=5, width=7.5)
 ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=5, width=7.5)
-ggsave(filename = 'hw1-multiline.png', plot = new_lineplot, height=3.6, width=5.2)
+ggsave(filename = 'hw1-multiline.png', plot = new_lineplot, height=3.4, width=5)
