@@ -17,7 +17,7 @@ To run this code, please enter the following commands in R:
 
 ```
 library(devtools)
-source_url("https://raw.github.com/sjengle/msan622/template/homework0/anscombe.r")
+source_url("https://raw.githubusercontent.com/msan622/msan622/master/homework0/anscombe.r")
 ```
 
 This will generate 1 image and some text output. See below for details.
