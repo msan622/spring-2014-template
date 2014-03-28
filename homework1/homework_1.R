@@ -1,8 +1,11 @@
-setwd("~/Documents/_DataVisualization/msan622/homework1")
+dir <- getwd()
+setwd(dir)
 
 library(ggplot2) 
 library(scales)
 library(reshape)
+library(grid)
+
 # load dataset
 data(movies) 
 data(EuStockMarkets)
@@ -33,12 +36,14 @@ million_formatter <- function(x) {
 
 # first plot
 scatter_plot <- ggplot(movies_subset, aes(x=budget, y=rating)) + 
-  geom_point(color = 'slategray4', alpha = .8) +  
-  xlab('Budget') + ylab('User Rating') + 
-  ggtitle('User Rating Vs. Budget') + 
+  geom_point(color = 'slategray4', alpha = .8, size = 1) +  
+  xlab('Budget') + ylab('Rating') + 
+  ggtitle('Rating vs. Budget') + 
   scale_x_continuous(label=million_formatter) + 
   scale_y_continuous(breaks=c(2,6,10))+
-  theme(text = element_text(size=10))
+  theme(title = element_text(size=10), 
+        axis.text.x = element_text(size=8), 
+        axis.text.y = element_text(size=8))
 print(scatter_plot)
 
 # second plot
@@ -59,12 +64,13 @@ print(bar_plot)
 # third plot
 small_mult_plot <- ggplot(movies_subset, aes(x=budget, y=rating, group = factor(genre))) + 
   geom_point(aes(colour = factor(genre))) +  
-  xlab('Budget') + ylab('User Rating') + 
-  ggtitle('IMDb User Rating Vs. Budget by Genre') + 
+  xlab('Budget') + ylab('Rating') + 
+  ggtitle('Rating vs. Budget by Genre') + 
   facet_wrap(~genre, ncol = 3)  + 
   scale_x_continuous(label=million_formatter) + 
   scale_y_continuous(breaks=c(2,6,10)) + 
-  guides(colour=FALSE) + scale_colour_manual(values=my_palette) 
+  guides(colour=FALSE) + scale_colour_manual(values=my_palette) +
+  theme(panel.margin = unit(.6, "lines"))
 print(small_mult_plot)
 
 # fourth plot
@@ -76,13 +82,14 @@ eu_m <- melt(eu, id.vars = 'time', value = c('DAX', 'SMI', 'CAC', 'FTSE'))
 
 new_lineplot <- ggplot(eu_m, aes(x=time, y=value, group = as.factor(variable), color = as.factor(variable))) + 
   geom_line() + xlab('Time') +
-  ggtitle('European Stock Indexes') +  
+  ggtitle('European Stock Index Values Over Time') +  
   ylab('Value') + theme(text = element_text(size=10)) + 
-  scale_colour_brewer(type = 'qual', palette = 7, name = 'Index')
+  scale_colour_brewer(type = 'qual', palette = 7, name = 'Index') + 
+  scale_x_continuous(breaks=c(1990, 1992, 1994, 1996, 1998)) 
 print(new_lineplot)
 
 # saving files
-ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3, width=4)
-ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=5, width=7.5)
-ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=5, width=7.5)
+ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3.75, width=4.5)
+ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=6, width=8.5)
+ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=7, width=8.5)
 ggsave(filename = 'hw1-multiline.png', plot = new_lineplot, height=3.4, width=5)
