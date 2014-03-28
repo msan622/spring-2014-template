@@ -31,4 +31,4 @@ This script will produce and save 4 images.
 
 ### Multi Line Plot
 ![Plot 4](hw1-multiline.png)
-<p align="center"> I created custom breaks for the x-axis and labeled the legend. Again, I made the text size slightly smaller. I used a *colorbrewer* palette for this plot. </p>
+<p align="center"> I created custom breaks for the x-axis and labeled the legend. Again, I made the text size slightly smaller. I used a _colorbrewer_ palette for this plot. </p>
