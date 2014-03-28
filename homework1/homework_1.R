@@ -20,14 +20,15 @@ genre[which(count == 1 & movies$Documentary == 1)] = "Documentary"
 genre[which(count == 1 & movies$Romance == 1)] = "Romance"
 genre[which(count == 1 & movies$Short == 1)] = "Short"
 movies$genre = genre
+
 # remove movies with budget of zero or less
 movies_subset <- subset(movies, movies$budget > 0)
 
 # custom palette for genres
 my_palette <- c("sienna2", "steelblue3", "darkolivegreen3", "slateblue3", "#333366", "bisque3","slategray4", 'brown3', "gold3")
 
+# format budget values
 million_formatter <- function(x) {
-  #label <- round(x / 1000)
   return(sprintf("$%dM", x / 1000000))
 }
 
@@ -42,7 +43,6 @@ scatter_plot <- ggplot(movies_subset, aes(x=budget, y=rating)) +
         axis.text.x = element_text(size=8), 
         axis.text.y = element_text(size=8)) + 
   ggsave(filename = 'hw1-scatter.png', height=3, width=3.75)
-
 print(scatter_plot)
 
 # second plot
@@ -59,7 +59,6 @@ bar_plot <- ggplot(movies_subset, aes(x = genre, y = ..count..)) +
         axis.ticks.x = element_blank(), 
         axis.text.x = element_text(size = 12)) + 
   ggsave(filename = 'hw1-bar.png', height=6, width=9)
-
 print(bar_plot)
 
 # third plot
