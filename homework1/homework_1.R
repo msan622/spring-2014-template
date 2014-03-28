@@ -71,7 +71,8 @@ small_mult_plot <- ggplot(movies_subset, aes(x=budget, y=rating, group = factor(
   scale_x_continuous(label=million_formatter) + 
   scale_y_continuous(breaks=c(2,6,10)) + 
   guides(colour=FALSE) + scale_colour_manual(values=my_palette) +
-  theme(panel.margin = unit(.6, "lines"))
+  theme(panel.margin = unit(.6, "lines")) +
+  ggsave(filename = 'hw1-multiples.png',  height=6, width=9)
 print(small_mult_plot)
 
 # fourth plot
