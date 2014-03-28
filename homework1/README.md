@@ -19,7 +19,7 @@ This script will produce and save 4 images.
 
 ### Scatter Plot
 ![Plot 1](hw1-scatter.png)
-<p align="center"> In this plot, I modified the default label for the y-axis, and transformed the labels for the x-axis. I also used the alpha parameter to make the points more transparent. This makes overlapping points easier to see. I also edited the text size as it was showing up rather large on GitHub. I used a neutral color from my movie palette for this plot. </p>
+<p align="center"> In this plot, I modified the default labels for the y-axis, and transformed the labels for the x-axis. I also used the alpha parameter to make the points more transparent -- as this makes overlapping points easier to see. I also edited the text size as it was showing up rather large on GitHub. I used a neutral color from my movie palette for this plot. </p>
 
 ### Bar Plot
 ![Plot 2](hw1-bar.png)
@@ -31,4 +31,4 @@ This script will produce and save 4 images.
 
 ### Multi Line Plot
 ![Plot 4](hw1-multiline.png)
-<p align="center"> I created custom breaks for the x-axis and labeled the legend. Again, I made the text size slightly smaller. I color brewer for the palette for this plot. </p>
+<p align="center"> I created custom breaks for the x-axis and labeled the legend. Again, I made the text size slightly smaller. I used a *colorbrewer* palette for this plot. </p>
