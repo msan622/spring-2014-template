@@ -18,7 +18,7 @@ This script will produce and save 4 images.
 ## Discussion ##
 
 ![Plot 1](hw1-scatter.png)
-<p align="center"> In this plot, I modified the default label for the y axis, and transformed the labels for the x-axis. I also used the alpha parameter to make the points more transparent. This makes overlapping points easier to see. I also edited the text size as it was showing up rather large on GitHub. </p>
+<p align="center"> In this plot, I modified the default label for the y-axis, and transformed the labels for the x-axis. I also used the alpha parameter to make the points more transparent. This makes overlapping points easier to see. I also edited the text size as it was showing up rather large on GitHub. </p>
 
 
 ![Plot 2](hw1-bar.png)

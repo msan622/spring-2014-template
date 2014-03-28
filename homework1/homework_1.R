@@ -1,6 +1,3 @@
-dir <- getwd()
-setwd(dir)
-
 library(ggplot2) 
 library(scales)
 library(reshape)
@@ -43,7 +40,9 @@ scatter_plot <- ggplot(movies_subset, aes(x=budget, y=rating)) +
   scale_y_continuous(breaks=c(2,6,10))+
   theme(title = element_text(size=10), 
         axis.text.x = element_text(size=8), 
-        axis.text.y = element_text(size=8))
+        axis.text.y = element_text(size=8)) + 
+  ggsave(filename = 'hw1-scatter.png', height=3, width=3.75)
+
 print(scatter_plot)
 
 # second plot
@@ -58,7 +57,9 @@ bar_plot <- ggplot(movies_subset, aes(x = genre, y = ..count..)) +
         panel.grid.major.x = element_blank(), 
         panel.grid.minor.y = element_blank(), 
         axis.ticks.x = element_blank(), 
-        axis.text.x = element_text(size = 12))
+        axis.text.x = element_text(size = 12)) + 
+  ggsave(filename = 'hw1-bar.png', height=6, width=9)
+
 print(bar_plot)
 
 # third plot
@@ -78,18 +79,12 @@ print(small_mult_plot)
 eu <- transform(data.frame(EuStockMarkets), time = as.numeric(time(EuStockMarkets)))
 eu_m <- melt(eu, id.vars = 'time', value = c('DAX', 'SMI', 'CAC', 'FTSE'))
 
-# pallete
-
 new_lineplot <- ggplot(eu_m, aes(x=time, y=value, group = as.factor(variable), color = as.factor(variable))) + 
   geom_line() + xlab('Time') +
   ggtitle('European Stock Index Values Over Time') +  
-  ylab('Value') + theme(text = element_text(size=10)) + 
+  ylab('Value') + theme(text = element_text(size=12)) + 
   scale_colour_brewer(type = 'qual', palette = 7, name = 'Index') + 
-  scale_x_continuous(breaks=c(1990, 1992, 1994, 1996, 1998)) 
+  scale_x_continuous(breaks=c(1990, 1992, 1994, 1996, 1998)) + 
+  ggsave(filename = 'hw1-multiline.png',  height=6, width=9)
 print(new_lineplot)
 
-# saving files
-ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3, width=3.75)
-ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=6, width=8.5)
-ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=7, width=8.5)
-ggsave(filename = 'hw1-multiline.png', plot = new_lineplot, height=3.4, width=5)
