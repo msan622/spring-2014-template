@@ -19,11 +19,11 @@ This script will produce and save 4 images.
 
 ### Scatter Plot
 ![Plot 1](hw1-scatter.png)
-<p align="center"> In this plot, I modified the default labels for the y-axis, and transformed the labels for the x-axis. I also used the alpha parameter to make the points more transparent -- as this makes overlapping points easier to see. I also edited the text size as it was showing up rather large on GitHub. I used a neutral color from my movie palette for this plot. </p>
+<p align="center"> In this plot, I modified the default labels for the y-axis, and transformed the labels for the x-axis. I also used the alpha parameter to make the points more transparent -- as this makes overlapping points easier to see. I edited the text size as it was showing up rather large on GitHub. I used a neutral color from my movie palette for this plot. </p>
 
 ### Bar Plot
 ![Plot 2](hw1-bar.png)
-<p align="center"> I used a little more customization in this plot. I took away the legend, axis titles, x-axis ticks, and vertical grid lines. I also increased the text size for the genre labels on the x-axis and decreased the padding of the plot. Further, I created a custom palette based on the genres. </p>
+<p align="center"> I used a little more customization in this plot. I took away the legend, axis titles, x-axis ticks, and vertical grid lines. I also increased the text size for the genre labels on the x-axis and decreased the padding of the plot. I created a custom palette based on the genres. </p>
 
 ### Small Multiples Plot
 ![Plot 3](hw1-multiples.png)
