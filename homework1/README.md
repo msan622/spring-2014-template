@@ -27,8 +27,8 @@ This script will produce and save 4 images.
 
 ### Small Multiples Plot
 ![Plot 3](hw1-multiples.png)
-<p align="center"> Again, I used my custom palette for the genres. I also increased the size of the space between the facets to make the x-axis labels easier to read. Again, I transformed the x-axis labels, and created custom breaks for the y-axis. </p>
+<p align="center"> I used my custom palette for the genres. I also increased the size of the space between the facets to make the x-axis labels easier to read. Again, I transformed the x-axis labels, and created custom breaks for the y-axis. </p>
 
 ### Multi Line Plot
 ![Plot 4](hw1-multiline.png)
-<p align="center"> I created custom breaks for the x-axis, and labeled the legend. Again, I made the text size slightly smaller. I used a color palette from color brewer for this plot. </p>
+<p align="center"> I created custom breaks for the x-axis and labeled the legend. Again, I made the text size slightly smaller. I color brewer for the palette for this plot. </p>
