@@ -89,7 +89,7 @@ new_lineplot <- ggplot(eu_m, aes(x=time, y=value, group = as.factor(variable), c
 print(new_lineplot)
 
 # saving files
-ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3.75, width=4.5)
+ggsave(filename = 'hw1-scatter.png', plot = scatter_plot, height=3, width=3.75)
 ggsave(filename = 'hw1-bar.png', plot = bar_plot, height=6, width=8.5)
 ggsave(filename = 'hw1-multiples.png', plot = small_mult_plot, height=7, width=8.5)
 ggsave(filename = 'hw1-multiline.png', plot = new_lineplot, height=3.4, width=5)

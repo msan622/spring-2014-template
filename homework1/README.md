@@ -22,7 +22,7 @@ This script will produce and save 4 images.
 
 
 ![Plot 2](hw1-bar.png)
-<p align="center"> I used a little more customization in this plot. I took away the legend, axis titles, x-axis ticks, and vertical grid lines. I also increased the text size for the genre labels on the x-axis and decreased the padding of the plot. Further, I created a custom palette for the genres. </p>
+<p align="center"> I used a little more customization in this plot. I took away the legend, axis titles, x-axis ticks, and vertical grid lines. I also increased the text size for the genre labels on the x-axis and decreased the padding of the plot. Further, I created a custom palette based on the genres. </p>
 
 
 ![Plot 3](hw1-multiples.png)
