@@ -20,24 +20,36 @@ genre[which(count == 1 & movies$Short == 1)] = "Short"
 movies$genre = as.factor(genre)
 
 # subset data
-movies_subset <- subset(movies, movies$budget > 0 & movies$mpaa != '' )
+movies_subset <- subset(movies, (movies$budget > 0 | movies$budget == '') & movies$mpaa != '' )
 
 # for formatting budget values
 million_formatter <- function(x) {
-  return(sprintf("$%dM", x / 1000000))
+  return(sprintf("$%dM", as.integer(x/1000000)))
 }
 
 
-getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToShow, alpha_level, point_size) {
+getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToShow, alpha_level, point_size, range, grid, background, jitter) {
   if (ratingsToShow != 'All'){
     localFrame <- localFrame[which(localFrame$mpaa == ratingsToShow),] 
   }
+  
   if (length(highlight) != 0){
     localFrame <- localFrame[which(localFrame$genre %in% highlight),]
   }
+  #
+  #if (range[1] != 0 & range[2] != 0){
+  #  localFrame <- localFrame[which(localFrame$budget >= range[1] & localFrame$budget <= range[2]),]
+  #}
+  
+  if (nrow(localFrame) == 0){
+    return('Data is empty.')
+  }
+  
   localPlot <- ggplot(localFrame, aes(x = as.numeric(budget), y = rating, color = factor(mpaa))) +
-    geom_point(size = point_size, alpha = alpha_level)+
-    scale_x_continuous(limits = c(0, 200000000), label = million_formatter, expand = c(0, 2500000)) +
+    #geom_point(size = point_size, alpha = alpha_level)+
+    scale_x_continuous(limits = range, 
+                       label = million_formatter, 
+                       expand = c(0, .01*(range[2] - range[1]))) +
     scale_y_continuous(limits = c(0, 10), expand = c(0, 0.25)) + 
     theme(axis.ticks.x = element_blank()) +
     theme(axis.text.y = element_text(size = 12)) +
@@ -45,8 +57,31 @@ getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToSho
     theme(legend.position = 'bottom') + 
     xlab('Budget') + ylab('Rating') + 
     ggtitle("Movie Ratings by Budget")
-  
+  if (jitter == TRUE){
+    localPlot <- localPlot + geom_jitter(size = point_size, alpha = alpha_level, position = 'jitter')
+  }
+  else{
+    localPlot <- localPlot + geom_point(size = point_size, alpha = alpha_level)
+  }
   mpaas <- levels(localFrame$mpaa)
+  
+  if (grid == TRUE){
+    localPlot <- localPlot + theme(panel.grid = element_blank())
+  }
+  
+  if (background == TRUE){
+    if (grid == FALSE){
+        localPlot <- localPlot + theme(panel.background = element_blank(), 
+                                       panel.grid.major = element_line(colour = 'gray90'),
+                                       panel.grid.minor = element_line(colour = 'gray90'),
+                                       legend.key = element_rect(fill = NA)) 
+    }
+    else{
+      localPlot <- localPlot + theme(panel.background = element_blank(),
+                                     panel.grid = element_blank(),
+                                     legend.key = element_rect(fill = NA)) 
+    }
+  }
   
   if (colorScheme == "Pastel 1") {
     my_palette <- brewer_pal(type = "qual", palette = 'Pastel1')(length(mpaas))
@@ -70,11 +105,14 @@ getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToSho
     my_palette <- brewer_pal(type = "qual", palette = 'Pastel2')(length(mpaas))
   }
   else if (colorScheme == 'Default'){
+    #my_palette <- brewer_pal(type = "qual", palette = 'Set3')(length(mpaas))
     return(localPlot + scale_color_discrete(name = 'MPAA Rating'))
   }
-#  my_palette[which(!genres %in% highlight)] <- "#EEEEEE"
+  
+  #my_palette[which(!genres %in% highlight)] <- "#EEEEEE"
   localPlot <- localPlot + scale_color_manual(values = my_palette, name = 'MPAA Rating')
   return(localPlot)
+
 }
 
 
@@ -96,13 +134,16 @@ output$scatterPlot <- renderPlot(
     input$highlight, 
     input$ratingsToShow, 
     input$alpha, 
-    input$size
+    input$size, 
+    input$range, 
+    input$grid, 
+    input$background, 
+    input$jitter
   )
-  
   # Output the plot
   print(scatterPlot)
 }
 )
 })
 
-  
+  # add in geom_jitter as an option??
