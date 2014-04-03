@@ -63,8 +63,7 @@ In your discussion, create a section for each technique and a section to describ
 For the interactivity section, include a screenshot of your `shiny` app and discuss the following:
 
 - How do you interact with your visualizations?
-- What types of navigation does your app support, and how?
-- What approaches (overview + detail, focus + context, etc.) did you implement?
+- What approaches (overview + detail, focus + context, etc.) did you implement and why?
 
 Each discussion section should range between 2 to 5 paragraphs of text.
 
