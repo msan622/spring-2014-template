@@ -1,9 +1,9 @@
 Homework 2: Interactivity
 ==============================
 
-| **Name**  | [YOUR NAME]  |
+| **Name**  | Rachel Smith  |
 |----------:|:-------------|
-| **Email** | [USERNAME]@dons.usfca.edu |
+| **Email** | rasmirac@dons.usfca.edu |
 
 ## Instructions ##
 
