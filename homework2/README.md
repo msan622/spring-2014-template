@@ -17,7 +17,8 @@ To run this code, please enter the following commands in R:
 
 - `library(shiny)` 
 - `shiny::runGitHub('msan622', 'rasmirac', subdir = 'homework2')`
-</br>
+
+
 **Note**: 
 It takes a few minutes to bring up the browser --  I'm not sure why. 
 
@@ -26,4 +27,5 @@ This will start the `shiny` app. See below for details on how to interact with t
 ## Discussion ##
 
 ![](shiny.png)
+
 
