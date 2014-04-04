@@ -11,16 +11,19 @@ The following packages must be installed prior to running this code:
 
 - `ggplot2`
 - `shiny`
+- `scales`
 
 To run this code, please enter the following commands in R:
 
-```
-library(shiny)
-shiny::runGitHub('msan622', '[USERNAME]', 'homework2')
-```
+
+`library(shiny)` </br>
+`shiny::runGitHub('msan622', 'rasmirac', subdir = 'homework2')`
+</br>
+**Note**: This takes a few minutes to bring up the browser --  I'm not sure why. 
 
 This will start the `shiny` app. See below for details on how to interact with the visualization.
 
 ## Discussion ##
 
-[DISCUSSION: Include a discussion here if required by the assignment.]
+![](shiny.png)
+

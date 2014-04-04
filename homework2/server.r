@@ -51,12 +51,10 @@ getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToSho
     scale_y_continuous(limits = c(0, 10), 
                        expand = c(0, 0.25)) + 
     theme(axis.ticks.x = element_blank()) +
-    theme(plot.title = element_text(size = 16)) + 
-    theme(axis.text.y = element_text(size = 12)) +
-    theme(axis.text.x = element_text(size = 12)) +
+    theme(axis.text.y = element_text(size = 14)) +
+    theme(axis.text.x = element_text(size = 14)) +
     theme(legend.position = 'bottom') + 
-    xlab('Budget') + ylab('Rating') + 
-    ggtitle("Movie Ratings by Budget")
+    xlab('Budget') + ylab('Rating') 
   if (jitter == TRUE){
     localPlot <- localPlot + geom_jitter(size = point_size, alpha = alpha_level, position = 'jitter')
   }
