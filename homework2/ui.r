@@ -3,7 +3,7 @@ library(shiny)
 
 shinyUI(
   pageWithSidebar(  
-    titlePanel("Movie Ratings and Budget"),
+    titlePanel("IMDb Movie Ratings"),
     sidebarPanel(
       # Add a drop-down box for sort columns.
       radioButtons(
@@ -22,7 +22,7 @@ shinyUI(
         choices = c("Default", "Accent", "Set 1", "Set 2", "Set 3", "Dark 2", "Pastel 1", "Pastel 2")
       ),
       sliderInput("range", "Budget Range:",
-                  min = 1, max = 200000000, step = 1000000, value = c(1, 200000000)
+                  min = 1, max = 200000000, step = 5000000, value = c(1, 200000000)
       ), 
       sliderInput(
         inputId = 'alpha',

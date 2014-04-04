@@ -55,6 +55,7 @@ getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToSho
     theme(axis.text.x = element_text(size = 14)) +
     theme(legend.position = 'bottom') + 
     xlab('Budget') + ylab('Rating') 
+  
   if (jitter == TRUE){
     localPlot <- localPlot + geom_jitter(size = point_size, alpha = alpha_level, position = 'jitter')
   }
