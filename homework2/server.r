@@ -23,12 +23,14 @@ movies$genre = as.factor(genre)
 movies_subset <- subset(movies, (movies$budget > 0 | movies$budget == '') & movies$mpaa != '' )
 
 # for formatting budget values
-million_formatter <- function(x) {
+million_formatter <- function(x) { 
   return(sprintf("$%dM", as.integer(x/1000000)))
 }
 
 
 getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToShow, alpha_level, point_size, range, grid, background, jitter) {
+  full_mpaas <- levels(localFrame$mpaa)[which(levels(localFrame$mpaa)!='')]
+  
   if (ratingsToShow != 'All'){
     localFrame <- localFrame[which(localFrame$mpaa == ratingsToShow),] 
   }
@@ -36,21 +38,17 @@ getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToSho
   if (length(highlight) != 0){
     localFrame <- localFrame[which(localFrame$genre %in% highlight),]
   }
-  #
-  #if (range[1] != 0 & range[2] != 0){
-  #  localFrame <- localFrame[which(localFrame$budget >= range[1] & localFrame$budget <= range[2]),]
-  #}
   
   if (nrow(localFrame) == 0){
     return('Data is empty.')
   }
   
   localPlot <- ggplot(localFrame, aes(x = as.numeric(budget), y = rating, color = factor(mpaa))) +
-    #geom_point(size = point_size, alpha = alpha_level)+
     scale_x_continuous(limits = range, 
                        label = million_formatter, 
                        expand = c(0, .01*(range[2] - range[1]))) +
-    scale_y_continuous(limits = c(0, 10), expand = c(0, 0.25)) + 
+    scale_y_continuous(limits = c(0, 10), 
+                       expand = c(0, 0.25)) + 
     theme(axis.ticks.x = element_blank()) +
     theme(axis.text.y = element_text(size = 12)) +
     theme(axis.text.x = element_text(size = 12)) +
@@ -63,8 +61,8 @@ getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToSho
   else{
     localPlot <- localPlot + geom_point(size = point_size, alpha = alpha_level)
   }
-  mpaas <- levels(localFrame$mpaa)
   
+  mpaas <- levels(localFrame$mpaa)
   if (grid == TRUE){
     localPlot <- localPlot + theme(panel.grid = element_blank())
   }
@@ -105,12 +103,10 @@ getPlot <- function(localFrame, colorScheme = "Default", highlight, ratingsToSho
     my_palette <- brewer_pal(type = "qual", palette = 'Pastel2')(length(mpaas))
   }
   else if (colorScheme == 'Default'){
-    #my_palette <- brewer_pal(type = "qual", palette = 'Set3')(length(mpaas))
-    return(localPlot + scale_color_discrete(name = 'MPAA Rating'))
+    return(localPlot + scale_color_discrete(name = 'MPAA Rating', limits = full_mpaas))
   }
   
-  #my_palette[which(!genres %in% highlight)] <- "#EEEEEE"
-  localPlot <- localPlot + scale_color_manual(values = my_palette, name = 'MPAA Rating')
+  localPlot <- localPlot + scale_color_manual(values = my_palette, name = 'MPAA Rating', limits = full_mpaas)
   return(localPlot)
 
 }

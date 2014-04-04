@@ -58,6 +58,6 @@ shinyUI(
       ), 
       width = 3, height = 10
     ),
-    mainPanel(plotOutput("scatterPlot", height = 575, width = 800))
+    mainPanel(plotOutput("scatterPlot", height = 750, width = 1200))
   )
 )
