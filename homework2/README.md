@@ -32,4 +32,10 @@ This app offers a variety of ways for the user to interact with the visualizatio
 
 I made some small changes to the plot in order to make it attractive and robust to user interaction. I noticed that the budget and rating range changed when I selected genres or MPAA ratings. To avoid this, I set the x and y-axis ranges to be constant in the plots. Because I allow for changes in the budget range, I used the user specified range for the to limit the values shown on the x-axis. Further, since the expanded margin size should change with the x-range, I made the expansion a function of the range. I also wanted the plot to have a consistent color scheme for the MPAA ratings. To do this, I set the `limits` command to the full options of the *mpaa* variable in the `scale_color_manual()` option in ggplot. 
 
-Cosmetic changes I made include changing the text size for the axis labels, moving the legend to below the plot, formatting the x-axis labels to show budget in millions of dollars, setting the display size of the plot, and removing the plot if the dataset doesn't not contain the user specified combinations of values (for example, NC-17 Animation movies). 
+Cosmetic changes that I made include: 
+
++ changed the text size for the axis labels
++ moved the legend to below the plot 
++ formatted the x-axis labels to show budget in millions of dollars
++ set the display size of the plot, removed the tick marks on the slider inputs
++ removed the plot if the dataset doesn't not contain the user specified combinations of values (for example, NC-17 Animation movies). 
