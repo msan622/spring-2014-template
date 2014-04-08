@@ -1,10 +1,11 @@
 MSAN 622 Data Visualization
 ==============================
 
-| **Name**  | [YOUR NAME] |
+| **Name**  | Rachel Smith |
 |----------:|:------------|
-| **Email** | [USERNAME]@dons.usfca.edu |
+| **Email** | rasmith2@dons.usfca.edu |
 
 ## About Me ##
 
-[BIO: Fill in a brief bio about yourself here. Keep it between 1 and 3 sentences.]
+Before joining USF's MSAN program, I studied Math and Economics at Rhodes College. As a former art student, I'm really excited for this class. 
+
