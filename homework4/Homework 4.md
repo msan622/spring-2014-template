@@ -33,12 +33,16 @@ You can use any source, but I recommend [Project Gutenberg](http://www.gutenberg
 
 ### Evaluation ###
 
-Attempt to create pixel-perfect visualizations with the best possible lie ratio, data-ink ratio, and data density. Since we have covered evaluation and these visualizations need not be interactive, these metrics determine a large portion of your grade.
+Attempt to create pixel-perfect visualizations with the best possible lie factor, data-ink ratio, and data density. Since we have covered evaluation and these visualizations need not be interactive, these metrics determine a large portion of your grade.
 
 Discussion
 ------------------------------
 
-Pending.
+Include a section that describes the dataset you choose for your visualizations. Indicate where the dataset comes form, any transformation you made to the dataset (including any transformations done using the `tm` package), and why you choose that dataset.
+
+For each visualization, include an image of the visualization accompanied with approximately 2 to 3 paragraphs discussing the visualization. If you used ManyEyes to create the visualization, also include a link to the visualization.
+
+In the discussion, explain the technique you used, an evaluation of the lie factor, data-ink ratio, and data density of your visualization, and what you learned from the visualization about the text. It is okay to discuss what does _not_ work about your visualization!
 
 Grading
 ------------------------------
