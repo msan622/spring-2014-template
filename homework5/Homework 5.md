@@ -10,7 +10,7 @@ Requirements
 
 Choose one of the two options below:
 
-- **Option 2: Static**  
+- **Option 1: Static**  
   Use the `ggplot2` package to generate three distinct static time-series visualizations. The three visualizations you provide should represent the three best possible representations of this data. 
 
 - **Option 2: Interactive**  
