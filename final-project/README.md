@@ -13,44 +13,49 @@ _You may use other tools and techniques, but please check with the instructor **
 
 ## Discussion ################
 
-Please include a `README.md` report with your name, images of your visualization, and a discussion. In your discussion, include a section on each visualization technique, interactivity, and prototype feedback. See the following sections for details.
+Please include a `README.md` report with your name, images of your visualization, and a discussion. In your discussion, include a section on each visualization technique, interactivity, prototype feedback, and challenges. See the following sections for details.
 
 ### Techniques ###
 
-Pending
+For each visualization, discuss the following:
 
-<!--For each visualization, you must decide on its visualization task or purpose. Valid visualization tasks include:
+- How you encoded the data (i.e. mapping between columns and preattentive attributes)
 
-Providing an overview (or context) of the dataset.
-Providing a focused view of the dataset.
-Encouraging exploration of the dataset.
-Identifying outliers.
-Identifying specific patterns or trends.
-Identifying clusters.
-Illustrating a specific story about the data.
-You should avoid repeating visualization tasks. For example, you should only include one visualization with the purpose to provide a general overview. However, if you find two different visualizations illustrate different patterns in the data, it is okay that they share the same visualization task.//-->
+- An evaluation of its lie factor, data density, and data to ink ratio
 
-<!--
-This discussion should identify the purpose or task you choose for each visualization, and include a discussion for why you feel the visualization achieves this purpose or task. You should also include one specific observation you are able to make about your dataset from that visualization.
+- What you think the visualization excels at (e.g. showing an overview of the dataset, identifying outliers, identifying patterns or trends, identifying clusters, comparison, etc.)
 
-It is important you understand the difference between an evaluation of a specific visualization versus an evaluation of a visualization technique. For example, do not discuss why the lie factor for bubble charts can be an issue. Discuss how well your specific bubble chart is able to achieve your visualization goal and what you learned about the underlying data.
+- What _you_ learned about the dataset from the visualization
 
-This discussion should be approximately 2 to 5 paragraphs for each visualization. You will be evaluated on how well your visualization achieves the purpose you specify, which will be highly influenced by your discussion.//-->
+This discussion should be approximately 2 to 5 paragraphs for each visualization, and this will heavily influence your score for this visualization.
 
 ### Interactivity ###
 
-Pending
+Please include an "Interactivity" section where you discuss the interactivity implemented in your project. Please discuss the following:
+
+- The type(s) of interactivity you implemented
+
+- How the interactivity enhances your visualization(s)
+
+For example, interactivity can help provide focus or context, help overcome overplotting issues, decrease or increase data density, and so on. This discussion should be approximately 2 to 5 paragraphs, depending on the amount of interactivity you implemented.
 
 ### Prototype Feedback ###
 
 Please include a "Prototype Feedback" section where you discuss the prototype exercise. Please discuss the following: 
 
-- What was the original prototype you demonstrated?
-- What changes did you make based on the feedback?
-- What feedback did you find particularly helpful, and why?
-- What feedback did you not agree with, and why?
+- Describe the original prototype you demonstrated
+
+- The changes did you make based on the feedback
+
+- The feedback that you found particularly helpful, and why
+ 
+- The feedback that you did not agree with, and why
 
 This section should range from 1 to 3 paragraphs of text.
+
+### Challenges ###
+
+Please include a "Challenges" section where you discuss the challenges you encountered during this project. Describe how you addressed the challenge, or why you did not address the challenge. Please also discuss what you would have liked to implement if you had more time.
 
 ## Grading ###################
 
